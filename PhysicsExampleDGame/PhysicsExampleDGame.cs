@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using tainicom.Aether.Physics2D.Dynamics;
 
 namespace PhysicsExampleDGame
 {
@@ -10,7 +9,6 @@ namespace PhysicsExampleDGame
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private World world;
         private List<BallSprite> balls;
 
 
@@ -25,35 +23,13 @@ namespace PhysicsExampleDGame
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            world = new World();
-            world.Gravity = Vector2.Zero;
-
-            var edges = new Body[] {
-                world.CreateEdge(Vector2.Zero, new Vector2(0, Constants.GAME_HEIGHT)),
-                world.CreateEdge(Vector2.Zero, new Vector2(Constants.GAME_WIDTH, 0)),
-                world.CreateEdge(new Vector2(0, Constants.GAME_HEIGHT), new Vector2(Constants.GAME_WIDTH, Constants.GAME_HEIGHT)),
-                world.CreateEdge(new Vector2(Constants.GAME_WIDTH, 0), new Vector2(Constants.GAME_WIDTH, Constants.GAME_HEIGHT))
-            };
-            foreach (var edge in edges)
-            {
-                edge.BodyType = BodyType.Static;
-                edge.SetRestitution(1.0f);
-            }
+            // TODO: Add your initialization logic here            
             System.Random random = new System.Random();
             balls = new List<BallSprite>();
             for (int i = 0; i < 20; i++)
             {
                 var radius = random.Next(5, 50);
-                var body = world.CreateCircle(
-                    radius,
-                    1f,
-                     new Vector2(random.Next(50, 680), random.Next(50, 310)),
-                     BodyType.Dynamic);
-                body.LinearVelocity = new Vector2(50 - (float)random.NextDouble() * 100, 50 - (float)random.NextDouble() * 100);
-                body.AngularVelocity = (float)random.NextDouble() * MathHelper.Pi - MathHelper.PiOver2;
-                body.SetRestitution(1.0f);
-                balls.Add(new BallSprite(body, radius));
+                balls.Add(new BallSprite(radius));
             }
 
 
@@ -75,7 +51,6 @@ namespace PhysicsExampleDGame
 
             // TODO: Add your update logic here
             foreach (var ball in balls) ball.Update(gameTime);
-            world.Step(gameTime.ElapsedGameTime);
 
             base.Update(gameTime);
         }
