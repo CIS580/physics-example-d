@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicsExampleDGame", "PhysicsExampleDGame\PhysicsExampleDGame.csproj", "{57BC3DFE-EB32-43BB-95DA-C58DD699BD1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhysicsExampleD", "PhysicsExampleD\PhysicsExampleD.csproj", "{C939087C-581D-4BCB-9F81-DEAB57287245}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57BC3DFE-EB32-43BB-95DA-C58DD699BD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57BC3DFE-EB32-43BB-95DA-C58DD699BD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57BC3DFE-EB32-43BB-95DA-C58DD699BD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57BC3DFE-EB32-43BB-95DA-C58DD699BD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C939087C-581D-4BCB-9F81-DEAB57287245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C939087C-581D-4BCB-9F81-DEAB57287245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C939087C-581D-4BCB-9F81-DEAB57287245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C939087C-581D-4BCB-9F81-DEAB57287245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

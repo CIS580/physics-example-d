@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
-namespace PhysicsExampleDGame
+namespace PhysicsExampleD
 {
     /// <summary>
     /// A class representing a ball that bounces off the edge of the screen

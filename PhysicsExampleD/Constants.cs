@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PhysicsExampleDGame
+namespace PhysicsExampleD
 {
     public static class Constants
     {
